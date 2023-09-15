@@ -1,123 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
-
-*{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: 'Poppins', sans-serif;
-}
-
-body{
-     background-color: rgba(247, 188, 229, 0.329);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
-}
-
-.container{
-     position: relative;
-     width: 100%;
-     max-width: 1000px;
-     min-height: 1000px;
-     background-color: #fff;
-     margin: 50px;
-     display: grid;
-     grid-template-columns: 1fr 2fr;
-     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
-}
-
-.container .left_side
+*
 {
-    position: relative;
-    background: #0ed4e2;
-    padding: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'popping' , 'sans-serif';
 }
 
-.container .right_side
+body
 {
-    position: relative;
-    background: #fff;
-    padding: 40px;
+   color: #ededed;
 }
 
-.profileText{
-       position: relative;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       padding-bottom: 20px;
-       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.profileText .imgBx{
-       position: relative;
-       width: 200px;
-       height: 200px;
-       border-radius: 50%;
-       overflow: hidden;
-}
-
-.profileText .imgBx img
+.header
 {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 10%;
+   background: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
 }
 
-.profileText h2
+.logo
 {
-    color: #fff;
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.4em;
+   position: relative;
+   font-size: 25px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
 }
 
-.profileText h2 span
+.logo::before
 {
-     font-size: 0.8em;
-     font-weight: 300;
-     color: black;
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: .4s;
 }
 
-.contactInfo{
-    padding-top: 40px;
-}
-
-.title{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
- 
-.contactInfo ul{
-     position: relative;
-}
-
-.contactInfo ul li
+.navbar a
 {
-    position: relative;
-    list-style: none;
-    margin: 10px 0;
-    cursor: pointer;
-    font-size: 15px;
+   display: inline-block;
+   font-size: 25px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 35px;
+   transition: .3s;
 }
 
-.contactInfo ul li .icon
+.navbar a:hover,
+.navbar a.active
 {
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color: #2009ee;
+   color: #0ef;
 }
 
+.home
+{
+   height: 100vh;
+   background: url('Sawera.jpg') no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   padding: 0 10%;
+}
 
+.home-content
+{
+   max-width: 600px;
+}
 
+.home-content h3
+{
+   position: relative;
+   font-size: 32px;
+   font-weight: 700;
+}
+
+.home-content h3::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 1s;
+}
+
+.home-content h1
+{
+   position: relative;
+   font-size: 56px;
+   font-weight: 700;
+   margin: -3px 0;
+   line-height: 1.2;
+}
+
+.home-content h1::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 2s;
+}
+.home-content h2
+{
+   position: relative;
+   font-size: 35px;
+   font-weight: 700;
+   color: #0ef;
+}
+
+.home-content h2::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 3s;
+}
+
+.home-content p
+{
+   position: relative;
+   font-size: 20px;
+   margin: 20px 0 40px;
+}
+
+.home-content p::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 4s;
+}
+
+.home-sci a
+{
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: transparent;
+   border: 2px solid #0ef;
+   border-radius: 50%;
+   font-size: 20px;
+   color: #0ef;
+   text-decoration: none;
+   margin: 30px 15px 30px 0;
+}
+
+.home-sci a::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 4s;
+}
+
+.home-sci a:hover
+{
+   background: #0ef;
+   color: #081b29;
+   box-shadow: 0 0 25px #0ef;
+}
+
+.btn-box
+{
+   position: relative;
+   display: inline-block;
+   padding: 12px 28px;
+   background: #0ef;
+   border-radius: 40px;
+   font-size: 16px;
+   color: #081b29;
+   letter-spacing: 1px;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.btn-box:hover
+{
+   box-shadow: 0 0 5px cyan,
+   0 0 25px cyan, 0 0 50px cyan,
+   0 0 100px cyan, 0 0 200px cyan;
+}
+
+.btn-box::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: black;
+   animation: showRight 1s ease forwards;
+   animation-delay: 5s;
+}
+
+.home-imgHover
+{
+   position: absolute;
+   top: 0;
+   right: 30px;
+   width: 750px;
+   height: 100%;
+   background: transparent;
+   transition: 3s;
+}
+
+.home-imgHover:hover
+{
+   background: black;
+   opacity: .8;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight
+{
+  100% {
+      width: 0;
+  }
+}
